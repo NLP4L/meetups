@@ -32,3 +32,10 @@ val model = HmmModel(index)
 val tagger = HmmTagger(model)
 
 tagger.tokens("jecel likes an apple .")
+
+// in order to see counts, try snippets below
+// nlp4l> model.totalBeginCount
+// nlp4l> model.beginClasses
+// nlp4l> val reader = RawReader(index)
+// nlp4l> reader.field("class_2g").get.terms.map(e => (e.text, e.totalTermFreq.toDouble)).foreach(println(_))
+// nlp4l> reader.field("class").get.terms.map(e => (e.text, e.totalTermFreq.toDouble)).foreach(println(_))
