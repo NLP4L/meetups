@@ -4,6 +4,7 @@ val ab = AnalyzerBuilder()
 
 ab.withTokenizer("standard")
 ab.addTokenFilter("shingle", "minShingleSize", "2", "maxShingleSize", "2", "outputUnigrams", "false")
+ab.addTokenFilter("lowercase")
 
 val analyzer = ab.build()
 
