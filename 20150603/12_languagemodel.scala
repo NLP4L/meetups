@@ -59,4 +59,4 @@ val prob_apple_an = count_an_apple.toFloat / count_an.toFloat
 val count_an_orange = reader.totalTermFreq("word2g", "an orange")
 val prob_orange_an = count_an_orange.toFloat / count_an.toFloat
 
-reader.close()
+reader.close
