@@ -34,6 +34,8 @@ SET CMDLINE=%JAVA_EXE% %JVM_OPT% "-Xmx512m" "-Dfile.encoding=UTF-8" ...
 SET CMDLINE=%JAVA_EXE% %JVM_OPT% "-Xmx512m" "-Dfile.encoding=Shift_JIS" ...
 ```
 
+起動
+
 ```
 $ target/pack/bin/nlp4l
 Welcome to NLP4L!

@@ -26,6 +26,21 @@ Success.
 
 ## ライブドアコーパスのインデックス
 
+Windowsユーザーの方へ:
+インデックス作成スクリプトの修正が2箇所必要になります。
+```
+// 1. インデックス作成先ディレクトリを適宜修正
+val index = "/tmp/index-ldcc"
+
+// 2. 30行目をコメントアウトし、32行目をアンコメント
+// val ps: Array[String] = file.path.split(File.separator)
+// for Windows
+val ps: Array[String] = file.path.split("\\\\")
+
+```
+
+インデックス作成
+
 ```
 $ cat examples/index_ldcc.scala
 $ target/pack/bin/nlp4l
