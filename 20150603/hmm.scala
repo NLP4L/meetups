@@ -1,8 +1,8 @@
 val index = "/tmp/index-hmm"
 
 val CORPUS = Array(
-  "Jecel/NNP ate/VB an/AT apple/NNP ./.",
-  "Frecy/NNP likes/VB an/AT orange/NNP ./.",
+  "Alice/NNP ate/VB an/AT apple/NNP ./.",
+  "Mike/NNP likes/VB an/AT orange/NNP ./.",
   "An/AT apple/NNP is/VB red/JJ ./."
 )
 
@@ -31,7 +31,7 @@ indexer.close()
 val model = HmmModel(index)
 val tagger = HmmTagger(model)
 
-tagger.tokens("jecel likes an apple .")
+tagger.tokens("alice likes an apple .")
 
 // in order to see counts, try snippets below
 // nlp4l> model.totalBeginCount

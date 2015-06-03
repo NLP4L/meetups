@@ -1,8 +1,8 @@
 val index = "/tmp/index-lm"
 
 val CORPUS = Array(
-  "Jecel ate an apple.",
-  "Frecy likes an orange.",
+  "Alice ate an apple.",
+  "Mike likes an orange.",
   "An apple is red."
 )
 
