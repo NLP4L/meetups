@@ -1,13 +1,16 @@
 val CORPUS = Array(
-  "alice ate an apple",
-  "mike likes an orange",
-  "an apple is red"
+  "Alice ate an apple.",
+  "Mike likes an orange.",
+  "An apple is red."
 )
 
 val index = "/tmp/index-simple"
 
 def schema(): Schema = {
-  val analyzer = Analyzer(new org.apache.lucene.analysis.core.WhitespaceAnalyzer)
+  val builder = AnalyzerBuilder()
+  builder.withTokenizer("standard")
+  builder.addTokenFilter("lowercase")
+  val analyzer = builder.build
   val fieldTypes = Map(
     "text" -> FieldType(analyzer, true, true, true, true)
   )
