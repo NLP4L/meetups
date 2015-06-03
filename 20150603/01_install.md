@@ -17,6 +17,12 @@ $ sbt pack
 
 初回はScala処理系および依存ライブラリをダウンロードするため、数分かかります。
 
+sbt pack で OutOfMemoryError が出る場合は、SBT_OPTS で最大ヒープサイズを指定してください。
+
+```
+export SBT_OPTS="-Xmx2g -XX:MaxPermSize=1g -Xss2m"
+```
+
 ## 対話シェルの起動
 
 ```
