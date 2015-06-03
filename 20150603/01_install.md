@@ -25,6 +25,15 @@ export SBT_OPTS="-Xmx2g -XX:MaxPermSize=1g -Xss2m"
 
 ## 対話シェルの起動
 
+Windowsユーザーの方へ:
+起動スクリプトで指定している文字エンコーディングを Shift_JIS に変更してください。
+```
+// target/pack/bin/nlp4l.bat 92行目
+SET CMDLINE=%JAVA_EXE% %JVM_OPT% "-Xmx512m" "-Dfile.encoding=UTF-8" ...
+//ここを以下のように変更
+SET CMDLINE=%JAVA_EXE% %JVM_OPT% "-Xmx512m" "-Dfile.encoding=Shift_JIS" ...
+```
+
 ```
 $ target/pack/bin/nlp4l
 Welcome to NLP4L!
